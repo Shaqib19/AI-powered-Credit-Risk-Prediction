@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Risk Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="protect()">
+
+<header class="topbar">
+  <h2>🏦 Credit Risk Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<!-- FEATURE STRIP -->
+<section class="features">
+  <div class="feature">
+    <img src="images/image_2.jpg">
+    <p>Digital Banking Intelligence</p>
+  </div>
+  <div class="feature">
+    <img src="images/image_3.jpg">
+    <p>Advanced Risk Analytics</p>
+  </div>
+  <div class="feature">
+    <img src="images/image_4.jpg">
+    <p>Market Driven Insights</p>
+  </div>
+</section>
+
+<!-- CENTERED DASHBOARD -->
+<section class="dashboard-wrapper">
+  <div class="dashboard">
+
+    <!-- INPUT CARD -->
+    <div class="card">
+      <h3>📋 Applicant Details</h3>
+
+      <input id="income" placeholder="Annual Income (₹)">
+      <input id="loan" placeholder="Loan Amount (₹)">
+      <input id="tenure" placeholder="Tenure (Months)">
+      <input id="score" placeholder="Credit Score">
+
+      <button onclick="predict()">Evaluate Risk</button>
+    </div>
+
+    <!-- RESULT CARD -->
+    <div class="card result">
+      <h3>📊 Risk Assessment</h3>
+      <h1 id="risk">—</h1>
+      <p id="prob"></p>
+    </div>
+
+  </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
